@@ -1,0 +1,125 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {position: relative;
+     background-image: url(ffwl.jpg);
+     background-repeat:no-repeat;
+     height: 200%;
+     background-position: center;
+     width: 100%;
+     background-size: cover;
+     color: rgb(241, 196, 15);
+     font-family: comic sans ms;}
+.im {opacity: 0.7;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 100%;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+<div class="im">
+<div class="tab">
+  <button class="tablinks" onmouseover="openCat(event, 'About')">About</button>
+  <button class="tablinks" onmouseover="openCat(event, 'Players')">Players</button>
+  <button class="tablinks" onmouseover="openCat(event, 'Events')">Events</button>
+</div>
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal. Unqualified, the word football is understood to refer to whichever form of football is the most popular in the regional context in which the word appears. Sports commonly called football in certain places include association football (known as soccer in some countries); gridiron football (specifically American football or Canadian football); Australian rules football; rugby football (either rugby league or rugby union); and Gaelic football.[1][2] These different variations of football are known as football codes.
+
+    There are a number of references to traditional, ancient, or prehistoric ball games played by indigenous peoples in many different parts of the world.[3][4][5] Contemporary codes of football can be traced back to the codification of these games at English public schools during the nineteenth century.[6][7] The expansion of the British Empire allowed these rules of football to spread to areas of British influence outside the directly controlled Empire.[8] By the end of the nineteenth century, distinct regional codes were already developing: Gaelic football, for example, deliberately incorporated the rules of local traditional football games in order to maintain their heritage.[9] In 1888, The Football League was founded in England, becoming the first of many professional football competitions. During the twentieth century, several of the various kinds of football grew to become some of the most popular team sports in the world</p>
+</div>
+
+<div id="Players" class="tabcontent">
+   <h3>Players</h3>
+   <img src="lm.jpg"  width="300px" height="250px"/>
+  <p><b>Lionel Andrés Messi Cuccittini</b> </p> 
+  <p><b>Born:</b> 24 June 1987 (age 31 years), Rosario, Argentina</p>
+  <p><b>Height:</b> 1.7 m</p>
+  <p><b>Current team:</b>  FC Barcelona (#10 / Forward), Argentina national football team (#10 / Forward)</p>
+  <p><b>Spouse:</b> Antonella Roccuzzo (m. 2017)</p>
+  <p><b>Did you know:</b> Lionel Messi has the second-most goals scored (108) of all time in the European Cup and UEFA Champions League.</p> 
+  <br/><br/><img src="cr.jpg" width="300px" height="250px" />
+  <p><b>Cristiano Ronaldo dos Santos Aveiro GOIH ComM  </b>is a Portuguese professional footballer who plays as a forward for Italian club Juventus and captains the Portugal national team.</p>
+  <p><b>Born:</b> 5 February 1985 (age 34 years), Hospital Dr. Nélio Mendonça, Funchal, Portugal</p>
+  <p><b>Height:</b> 1.87 m</p>
+  <p><b>Current team:</b> Juventus F.C. (#7 / Forward), Portugal national football team (#7 / Forward)</p>
+  <p><b>Partner:</b> Georgina Rodríguez</p>
+  <p><b>Did you know:</b> Cristiano Ronaldo has the second-most international goals scored (85) among men's association football players.</p>
+</div>
+
+<div id="Events" class="tabcontent">
+  <h3>Events</h3>
+  <img src="fbmat.png">
+</div></div>
+
+<div class="clearfix"></div>
+
+<script>
+function openCat(evt, catName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(catName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html>

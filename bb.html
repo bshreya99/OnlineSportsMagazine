@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {position: relative;
+     background-image: url(bab.jpg);
+     background-repeat:no-repeat;
+     height: 200%;
+     background-position: center;
+     width: 100%;
+     background-size: cover;
+     color: rgb(241, 196, 15);
+     font-family: comic sans ms;}
+.im {opacity: 0.8;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 100%;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+<div class="im">
+<div class="tab">
+  <button class="tablinks" onmouseover="openCat(event, 'About')">About</button>
+  <button class="tablinks" onmouseover="openCat(event, 'Players')">Players</button>
+  <button class="tablinks" onmouseover="openCat(event, 'Events')">Events</button>
+</div>
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Basketball is a team sport in which two teams, most commonly of five players each, opposing one another on a rectangular court, compete with the primary objective of shooting a basketball (approximately 9.4 inches (24 cm) in diameter) through the defender's hoop (a basket 18 inches (46 cm) in diameter mounted 10 feet (3.048 m) high to a backboard at each end of the court) while preventing the opposing team from shooting through their own hoop. A field goal is worth two points, unless made from behind the three-point line, when it is worth three. After a foul, timed play stops and the player fouled or designated to shoot a technical foul is given one or more one-point free throws. The team with the most points at the end of the game wins, but if regulation play expires with the score tied, an additional period of play (overtime) is mandated.
+
+        Players advance the ball by bouncing it while walking or running (dribbling) or by passing it to a teammate, both of which require considerable skill. On offense, players may use a variety of shots—the lay-up, the jump shot, or a dunk; on defense, they may steal the ball from a dribbler, intercept passes, or block shots; either offense or defense may collect a rebound, that is, a missed shot that bounces from rim or backboard. It is a violation to lift or drag one's pivot foot without dribbling the ball, to carry it, or to hold the ball with both hands then resume dribbling.
+        
+        The five players on each side at a time fall into five playing positions: the tallest player is usually the center, the tallest and strongest is the power forward, a slightly shorter but more agile big man is the small forward, and the shortest players or the best ball handlers are the shooting guard and the point guard, who implements the coach's game plan by managing the execution of offensive and defensive plays (player positioning). Informally, players may play three-on-three, two-on-two, and one-on-one.</p>
+</div>
+
+<div id="Players" class="tabcontent">
+   <h3>Players</h3>
+   <img src="leb.jpg"/>
+  <p><b>LeBron Raymone James Sr.</b> is an American professional basketball player for the Los Angeles Lakers of the National Basketball Association. He is often considered the best basketball player in the world and regarded by some as the greatest player of all time</p> 
+  <p><b>Born:</b> 30 December 1984 (age 34 years), Akron, Ohio, United States</p>
+  <p><b>Height:</b> 2.03 m</p>
+  <p><b>Current team:</b> Los Angeles Lakers (#23 / Small forward, Power forward)</p>
+  <p><b>Spouse:</b> Savannah James (m. 2013)</p>
+  <p><b>Did you know:</b> LeBron James is the highest-scoring NBA player by total career playoff points scored (6,911).</p> 
+  <br/><br/><img src="ste.jpg"/>
+  <p><b>Wardell Stephen Curry II </b>is an American professional basketball player for the Golden State Warriors of the National Basketball Association. A six-time NBA All-Star, he has been named the NBA Most Valuable Player twice and won three NBA championships with the Warriors.</p>
+  <p><b>Born:</b>14 March 1988 (age 31 years), Akron, Ohio, United States</p>
+  <p><b>Height:</b>1.91 m</p>
+  <p><b>Current team:</b>Golden State Warriors</p>
+  <p><b>Spouse:</b>Ayesha Curry (m. 2011)</p>
+  <p><b>Did you know:</b>Stephen Curry ranks second among NBA players by total career playoff three-point field goals made (378).</p>
+</div>
+
+<div id="Events" class="tabcontent">
+  <h3>Events</h3>
+  <img src="bbmat.png">
+</div></div>
+
+<div class="clearfix"></div>
+
+<script>
+function openCat(evt, catName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(catName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html>

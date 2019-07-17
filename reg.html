@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>registration</title>
+        <style type="text/css">
+            body {position: relative;
+                  top: 75px;
+                  background-image: url(lr.jpg);
+                  background-repeat:no-repeat;
+                  height: 50%;
+                 background-position: center;
+                 width: 100%;
+                 background-size: cover;
+                 color:rgb(234, 236, 238);
+                 font-size: 26px;
+                 font-family: comic sans ms;
+                 background-color: black}
+            .reg {
+                background-color: black;
+                opacity: 0.7;
+                width: 400px;
+                height: 550px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 20px;
+            }
+            .button {
+                background-color: rgba(234, 236, 238);
+                color:black;
+                padding: 5px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 2px 1px;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                cursor: pointer; 
+            }
+            .button:hover {
+             background-color: rgba(32, 86, 204);
+             color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="reg">
+        <center>
+            <form>
+                <p>First Name:<input type="text" name="firstname" id="fn" placeholder="First Name" required/></p>
+                <p>Last Name:<input type="text" name="lastname"  id="ln" placeholder="Last Name" required/></p>
+                <p>Password:<input type="password" minlength="6" name="password" id="pswd" placeholder="Password" required/></p>
+                <p>Email id:<input type="email" name="email" id="email" placeholder="E-mail" required/></p>
+                <p>Address:<textarea name="address" rows="7" cols="35" id="add" placeholder="Address" required></textarea></p>
+                <p>Phone no.<input type="tel" minlength="10" maxlength="10" name="phone" id="phn" placeholder="Phone no." required/></p>
+                <p>DOB:<input type="date" name="dob" id="dob" required/></p>
+                <p><input class="button" type="submit" value="Submit" id="submit" onclick="val()"></p>
+            </form>
+        </center>
+        </div>
+        <script type="text/javascript">
+            function val()
+            {
+                var fn=document.getElementById("fn").value;
+                var ln=document.getElementById("ln").value;
+                var pwd=document.getElementById("pwd").value;
+                var email=document.getElementById("email").value;
+                var add=document.getElementById("add").value;
+                var phn=document.getElementById("phn").value;
+                var dob=document.getElementById("dob").value;
+                var letters = /^[A-Za-z]+$/;
+                if(fn.value==1 && ln.value==1)
+                {
+                    var letters = /^[A-Za-z]+$/;
+                    if(fn.value.match(letters)&& ln.value.match(letters))
+                    {
+                        return true;
+                    }
+                    else
+                        alert("Enter alphabets");
+                }
+                else
+                    alert("Enter value";)
+            }
+
+        </script>
+    </body>
+</html>
